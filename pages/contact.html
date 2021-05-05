@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap"
+   rel="stylesheet"
+  />
+  <link
+   rel="stylesheet"
+   href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""
+  />
+  <script
+   defer
+   src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""
+  ></script>
+  <link rel="stylesheet" href="/css/main.css" />
+  <script defer src="/app/js/contact-form.js"></script>
+  <script defer src="/app/js/map.js"></script>
+  <script type="module" src="/app/js/mobile-menu.js"></script>
+
+  <title>Contact</title>
+ </head>
+ <body>
+  <div class="container">
+   <div class="margin">
+    <div class="about">
+     <div class="page-name hide-for-mobile">
+      <span class="page-name-line"></span>
+      <span class="page-name-text about">
+       <span>Contact</span>
+      </span>
+     </div>
+
+     <!-- Header -->
+     <header class="header">
+      <div class="overlay has-fade"></div>
+      <nav class="flex-row">
+       <a href="/index.html" class="header__logo">
+        <img src="/assets/logo.svg" alt="arch studio logo" />
+       </a>
+
+       <div class="btn-hamburger header__toggle open hide-for-tablet">
+        <span></span>
+        <span></span>
+        <span></span>
+       </div>
+      </nav>
+
+      <div class="header__links contact hide-for-mobile">
+       <a href="/pages/portfolio.html" class="header__menu--link">Portfolio</a>
+       <a href="/pages/about.html" class="header__menu--link">About Us</a>
+       <a href="/pages/contact.html" class="header__menu--link">Contact</a>
+      </div>
+
+      <div class="header__menu has-fade hide-for-tablet">
+       <a href="/pages/portfolio.html" class="header__menu--link">Portfolio</a>
+       <a href="/pages/about.html" class="header__menu--link">About Us</a>
+       <a href="/pages/contact.html" class="header__menu--link">Contact</a>
+      </div>
+     </header>
+    </div>
+
+    <main>
+     <div class="contact">
+      <div class="about__hero bg-image hide-for-tablet">
+       <div class="about__hero--content">
+        <h1 class="about__hero--title hide-for-mobile">Contact</h1>
+       </div>
+      </div>
+      <div class="about__hero--text-overlay container-mobile hide-for-tablet">
+       <div class="about__hero--text-container">
+        <h1 class="about__hero--text-title heading-dark">
+         Tell us about your project
+        </h1>
+        <p class="text">
+         We’d love to hear more about your project. Please, leave a message
+         below or give us a call. We have two offices, one in Texas and one in
+         Tennessee. If you find yourself nearby, come say hello!
+        </p>
+       </div>
+      </div>
+
+      <!-- Tablet -->
+      <div class="about__hero bg-image hide-for-mobile">
+       <div class="about__hero--content">
+        <h1 class="about__hero--title hide-for-mobile">Contact</h1>
+       </div>
+       <div class="about__hero--text-overlay container-mobile">
+        <div class="about__hero--text-container">
+         <h1 class="about__hero--text-title heading-dark">
+          Tell us about your project
+         </h1>
+         <p class="text">
+          We’d love to hear more about your project. Please, leave a message
+          below or give us a call. We have two offices, one in Texas and one in
+          Tennessee. If you find yourself nearby, come say hello!
+         </p>
+        </div>
+       </div>
+      </div>
+
+      <div class="about__heritage container-mobile">
+       <div class="contact__content">
+        <h1 class="contact__title heading-dark">Contact Details</h1>
+        <div class="contact__list--container">
+         <p class="contact__list--title">Main Office</p>
+         <ul class="contact__list">
+          <li class="contact__item"><span>Mail:</span>archone@mail.com</li>
+          <li class="contact__item">
+           <span>Address:</span> 1892 Chenoweth Drive TN
+          </li>
+          <li class="contact__item">Phone : 123-456-3451</li>
+         </ul>
+         <button class="btn-view" id="btn-view-1">
+          <div class="wrap">
+           <span
+            >View on Map
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
+             <g
+              fill="none"
+              fill-rule="evenodd"
+              stroke="#1B1D23"
+              stroke-width="2"
+             >
+              <path d="M15 1l9 9-9 9M0 10h24" />
+             </g>
+            </svg>
+           </span>
+          </div>
+         </button>
+        </div>
+        <div class="contact__list--container">
+         <p class="contact__list--title">Office II</p>
+         <ul class="contact__list">
+          <li class="contact__item"><span>Mail:</span> archtwo@mail.com</li>
+          <li class="contact__item">
+           <span>Address:</span> 3399 Wines Lane TX
+          </li>
+          <li class="contact__item">Phone : 832-123-4321</li>
+         </ul>
+         <button class="btn-view" id="btn-view-2">
+          <div class="wrap">
+           <span
+            >View on Map
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
+             <g
+              fill="none"
+              fill-rule="evenodd"
+              stroke="#1B1D23"
+              stroke-width="2"
+             >
+              <path d="M15 1l9 9-9 9M0 10h24" />
+             </g>
+            </svg>
+           </span>
+          </div>
+         </button>
+        </div>
+       </div>
+      </div>
+
+      <!-- Map -->
+      <div class="contact__map" id="mapid"></div>
+
+      <!-- Contact form -->
+      <div class="contact__form container-mobile">
+       <h1 class="contact__form--title heading-dark">Connect with us</h1>
+       <form action="#" class="contact__form--user" id="form">
+        <div class="contact__form--control">
+         <input type="text" name="name" id="name" placeholder="Name" />
+         <small class="contact__error"></small>
+        </div>
+        <div class="contact__form--control">
+         <input type="email" name="email" id="email" placeholder="Email" />
+         <small class="contact__error"></small>
+        </div>
+        <div class="contact__form--control">
+         <input name="message" id="message" placeholder="Message" />
+         <small class="contact__error"></small>
+        </div>
+        <button type="submit" class="btn-submit">
+         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
+          <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+           <path d="M15 1l9 9-9 9M0 10h24" />
+          </g>
+         </svg>
+        </button>
+       </form>
+      </div>
+     </div>
+    </main>
+    <footer class="footer margin">
+     <a href="/index.html" class="footer__logo--container">
+      <div class="footer__logo--img"></div>
+     </a>
+     <ul>
+      <div class="footer__links">
+       <li>
+        <a href="/pages/portfolio.html" class="footer__link">Portfolio</a>
+       </li>
+       <li><a href="/pages/about.html" class="footer__link">About Us</a></li>
+       <li><a href="/pages/contact.html" class="footer__link">Contact</a></li>
+      </div>
+
+      <a href="/pages/portfolio.html" class="btn-portfolio">
+       <div class="wrap">
+        <span
+         >See Our Portfolio
+         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
+          <g fill="none" fill-rule="evenodd" stroke="#1B1D23" stroke-width="2">
+           <path d="M15 1l9 9-9 9M0 10h24" />
+          </g>
+         </svg>
+        </span>
+       </div>
+      </a>
+     </ul>
+    </footer>
+   </div>
+  </div>
+ </body>
+</html>
