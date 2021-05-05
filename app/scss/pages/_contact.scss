@@ -1,0 +1,301 @@
+@use '../abstracts' as *;
+
+.page-name-text.about {
+ position: absolute;
+ top: 15.4rem;
+ left: -2.8rem;
+ width: 12.5rem;
+ display: flex;
+ justify-content: space-between;
+}
+
+.header__links.contact {
+ a {
+  &:nth-child(3) {
+   color: var(--primary-heading);
+   position: relative;
+
+   &::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    right: 0;
+    width: 25px;
+    height: 1.5px;
+    background-color: var(--primary-heading);
+   }
+  }
+ }
+}
+
+.contact {
+ .about__hero {
+  position: relative;
+  min-height: 15rem;
+  background-image: url('/assets/contact/mobile/image-hero.jpg');
+
+  @include breakpoint-up(medium) {
+   min-height: 45rem;
+   background-image: url('/assets/contact/tablet/image-hero.jpg');
+  }
+
+  @include breakpoint-up(large) {
+   background-image: url('/assets/contact/desktop/image-hero.jpg');
+  }
+
+  @include breakpoint-up(xlarge) {
+   width: 39.75rem;
+  }
+ }
+
+ .about__hero--title {
+  @include breakpoint-up(xlarge) {
+   right: -31rem;
+  }
+ }
+
+ .about__heritage {
+  margin-bottom: 1rem;
+
+  @include breakpoint-up(medium) {
+   margin-bottom: 9.75rem;
+  }
+  @include breakpoint-up(large) {
+   display: block;
+   margin-bottom: 12.6875rem;
+   &::before {
+    top: -4.75rem;
+   }
+  }
+ }
+
+ &__content {
+  @include breakpoint-up(large) {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+  }
+ }
+
+ &__title {
+  padding-bottom: 4.0625rem;
+
+  @include breakpoint-down(medium) {
+   max-width: 1rem;
+  }
+ }
+
+ &__list--container {
+  padding-bottom: 3.3125rem;
+  color: var(--secondary-text);
+
+  @include breakpoint-up(medium) {
+   position: relative;
+  }
+ }
+
+ &__list {
+  padding-top: 1.9375rem;
+  padding-bottom: 2.4375rem;
+  font-size: var(--font-text-sm);
+ }
+
+ &__item {
+  &:nth-child(1) span {
+   padding-right: 3.3rem;
+  }
+
+  &:nth-child(2) span {
+   padding-right: 1.25rem;
+  }
+  &:not(:last-child) {
+   padding-bottom: 1.9375rem;
+  }
+ }
+
+ .btn-view {
+  background-color: transparent;
+  padding: 2rem 7rem;
+  color: var(--primary-heading);
+  top: -1.5rem;
+  right: 1rem;
+
+  &:hover {
+   span {
+    text-decoration: underline;
+   }
+  }
+
+  span {
+   position: absolute;
+   top: 28px;
+   left: 44px;
+   font-size: var(--font-text-sm);
+   color: var(--primary-heading);
+   z-index: 45;
+  }
+
+  svg {
+   left: 8rem;
+  }
+
+  svg path {
+   stroke: var(--primary-heading);
+  }
+
+  @include breakpoint-up(medium) {
+   position: absolute;
+   top: 5rem;
+   right: 0;
+  }
+
+  @include breakpoint-up(large) {
+   top: 13rem;
+   right: 7rem;
+  }
+ }
+
+ ////////////////////////////
+ // Map
+ &__map {
+  min-height: 22.9375rem;
+  margin-bottom: 4.5rem;
+  width: 100%;
+  background-color: rgba(77, 77, 77, 0.226);
+  padding: 13rem;
+
+  @include breakpoint-up(medium) {
+   min-height: 35rem;
+   margin-bottom: 12.5rem;
+  }
+
+  @include breakpoint-up(large) {
+   margin-bottom: 10rem;
+  }
+
+  .leaflet-tooltip {
+   color: var(--primary-heading);
+   font-family: 'Spartan', sans-serif;
+   padding: 0.4rem;
+   border-radius: 5px;
+  }
+
+  .leaflet-top {
+   display: none;
+  }
+ }
+
+ ///////////////////////////
+ // Form
+ &__form {
+  margin-bottom: 12rem;
+
+  @include breakpoint-up(xlarge) {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  }
+
+  input {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   border: 0;
+   padding: 1rem 0 1rem 2.1875rem;
+   width: 60%;
+   font-family: inherit;
+   font-size: var(--font-text-sm);
+
+   @include breakpoint-up(medium) {
+    width: 70%;
+   }
+
+   &::placeholder {
+    color: var(--secondary-text);
+   }
+  }
+
+  button {
+   height: 5rem;
+   width: 5rem;
+   background-color: #000;
+   cursor: pointer;
+
+   position: absolute;
+   right: 0;
+   @include hover(speed);
+
+   &:hover {
+    background-color: var(--primary-text);
+   }
+  }
+ }
+
+ &__form--title {
+  max-width: 8rem;
+  margin-bottom: 1.2rem;
+
+  @include breakpoint-up(medium) {
+   max-width: 30rem;
+   margin-bottom: 2.4rem;
+  }
+
+  @include breakpoint-up(large) {
+   margin-bottom: 4rem;
+  }
+
+  @include breakpoint-up(xlarge) {
+   max-width: 14rem;
+  }
+ }
+
+ &__form--user {
+  position: relative;
+
+  @include breakpoint-up(large) {
+   grid-column: 2 / -1;
+   top: -2rem;
+  }
+ }
+
+ &__form--control {
+  height: 5.125rem;
+  border-bottom: 1px solid var(--primary-heading);
+  position: relative;
+
+  &:hover {
+   border-bottom: 2px solid;
+   cursor: pointer;
+  }
+
+  &:last-of-type {
+   height: 8.25rem;
+  }
+
+  small {
+   position: absolute;
+   bottom: 1.125rem;
+   right: 0;
+   font-size: var(--font-error-sm);
+   color: var(--error-red);
+
+   @include breakpoint-up(medium) {
+    font-size: var(--font-error-med);
+   }
+  }
+
+  #message {
+   padding-bottom: 4rem;
+  }
+ }
+
+ ////////
+ // Error classes
+
+ &__form--control.error {
+  border-bottom-color: var(--error-red);
+ }
+
+ &__form--control.error input::placeholder {
+  color: var(--error-red);
+ }
+}

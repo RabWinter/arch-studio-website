@@ -1,0 +1,31 @@
+:root {
+ --primary-heading: hsl(225, 13%, 12%);
+ --primary-text: hsl(226, 6%, 40%);
+ --secondary-text: hsl(223, 7%, 53%);
+ --primary-light: hsl(225, 17%, 82%);
+ --secondary-light: hsl(230, 21%, 95%);
+ --error-red: hsl(0, 68%, 61%);
+ --white: hsl(0, 0%, 100%);
+ --mobile-menu-overlay: hsla(0, 0%, 11%, 0.836);
+ --hero-image-overlay: linear-gradient(
+  rgba(0, 0, 0, 0.418),
+  rgba(0, 0, 0, 0.37)
+ );
+ --hero-image-overlay-dark: rgba(0, 0, 0, 0.322);
+ --hero-image-overlay-sepia: rgba(172, 168, 112, 0.164);
+
+ --font-heading-lg: 5rem;
+ --font-heading-med: 3.5rem;
+ --font-heading-sm: 1.125rem;
+
+ --font-text-sm: 1rem;
+ --font-text-med: 1.5625rem;
+
+ --font-error-sm: 0.7rem;
+ --font-error-med: 0.8rem;
+
+ --min-height-mobile: 35rem;
+ --min-height-tablet: 45rem;
+
+ --min-height-portfolio-mobile: 15rem;
+}

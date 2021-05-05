@@ -1,0 +1,116 @@
+@use '../abstracts' as *;
+
+// Use '@extend' to carry over styles
+
+button {
+ border: 0;
+ background-color: transparent;
+ font-family: 'Spartan', sans-serif;
+ font-size: var(--font-text-sm);
+}
+
+.btn-portfolio,
+.btn-view {
+ background-color: var(--primary-heading);
+ padding: 2.35rem 8rem;
+ font-weight: 500;
+ display: inline-block;
+ position: relative;
+ cursor: pointer;
+ @include hover(speed);
+
+ &:hover {
+  background-color: var(--primary-text);
+ }
+
+ .wrap {
+  position: absolute;
+  top: 0;
+  left: -13px;
+
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+ }
+
+ span {
+  position: absolute;
+  top: 28px;
+  left: 44px;
+  font-size: var(--font-text-sm);
+  color: var(--white);
+ }
+
+ svg {
+  position: absolute;
+  top: 0;
+  left: 10.5rem;
+ }
+ svg path {
+  stroke: var(--white);
+ }
+}
+
+.btn-hamburger {
+ cursor: pointer;
+}
+
+.link-btn {
+ padding: 1.5rem 5.0625rem 2.5rem 3.5625rem;
+ background-color: var(--primary-heading);
+ font-size: var(--font-text-sm);
+ color: var(--white);
+
+ @include hover(speed);
+
+ &:hover {
+  background-color: var(--primary-text);
+ }
+
+ span {
+  position: relative;
+  top: 4px;
+ }
+
+ svg {
+  position: absolute;
+  bottom: 150px;
+  left: 153px;
+ }
+}
+
+.page-name {
+ position: absolute;
+
+ @include breakpoint-up(medium) {
+  left: -1px;
+ }
+
+ @include breakpoint-up(large) {
+  left: 30px;
+ }
+
+ .page-name-line {
+  &::before {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 3.125rem;
+   height: 6.5rem;
+   width: 1px;
+   background-color: var(--primary-light);
+  }
+ }
+
+ .page-name-text {
+  position: absolute;
+  top: 202px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: var(--font-text-sm);
+  letter-spacing: 14px;
+  color: var(--primary-light);
+  transform: rotate(90deg);
+  // rotate: 90deg;
+ }
+}

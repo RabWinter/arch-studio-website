@@ -1,0 +1,299 @@
+@use '../abstracts' as *;
+
+.features {
+ &__welcome {
+  position: relative;
+ }
+
+ &__welcome--title-large {
+  font-size: var(--font-heading-lg);
+  color: var(--secondary-light);
+  padding: 5rem 0 4rem 0;
+
+  @include breakpoint-up(large) {
+   font-size: 12rem;
+   padding: 6.4375rem 0 0 0;
+  }
+ }
+
+ &__welcome--image {
+  display: none;
+
+  @include breakpoint-up(xlarge) {
+   display: block;
+   position: absolute;
+   right: 0;
+   top: 12.8rem;
+   min-height: 35.5rem;
+   width: 21.9375rem;
+   background-image: url('/assets/home/desktop/image-welcome.jpg');
+   z-index: -1;
+  }
+ }
+
+ &__welcome--text-wrap {
+  position: relative;
+  padding: 8.75rem 0 9.1825rem 0;
+
+  &::before {
+   position: absolute;
+   top: 76px;
+   left: 0;
+   content: '';
+   height: 1px;
+   width: 4.0625rem;
+   background-color: var(--primary-light);
+
+   @include breakpoint-up(medium) {
+    display: none;
+   }
+  }
+
+  @include breakpoint-up(medium) {
+   padding: 0 0 14.6875rem 0;
+  }
+
+  @include breakpoint-up(large) {
+   max-width: 46rem;
+   padding: 0 8rem 14.6875rem 1.8125rem;
+  }
+
+  @include breakpoint-up(xxlarge) {
+   padding: 0 2rem 11.6875rem 11.8125rem;
+   margin-top: -3.4rem;
+  }
+ }
+
+ &__welcome--title {
+  color: var(--primary-heading);
+  font-size: 2rem;
+  line-height: 1.2;
+  padding-bottom: 2.6875rem;
+
+  @include breakpoint-up(medium) {
+   font-size: var(--font-heading-med);
+  }
+
+  @include breakpoint-up(xlarge) {
+   margin-top: 0.2rem;
+   line-height: 1;
+  }
+ }
+
+ &__welcome--text {
+  &:not(:last-child) {
+   padding-bottom: 2rem;
+  }
+ }
+
+ // Team
+ &__team {
+  min-height: 35rem;
+  background-image: url('/assets/home/mobile/image-small-team.jpg');
+
+  @include breakpoint-up(medium) {
+   background-image: url('/assets/home/tablet/image-small-team.jpg');
+  }
+
+  @include breakpoint-up(large) {
+   background-image: url('/assets/home/desktop/image-small-team.jpg');
+   background-position: bottom;
+  }
+ }
+
+ &__team--content {
+  min-height: var(--min-height-mobile);
+  padding-top: 11.3125rem;
+  background-color: rgba(0, 0, 0, 0.562);
+  color: var(--secondary-light);
+
+  .btn-portfolio {
+   padding: 2.35rem 6rem;
+
+   svg {
+    top: 0;
+    left: 6.4rem;
+   }
+  }
+
+  @include breakpoint-up(medium) {
+   padding-top: 10.5626rem;
+  }
+ }
+
+ &__team--title {
+  padding-bottom: 1.5rem;
+  max-width: 17rem;
+
+  @include breakpoint-up(medium) {
+   max-width: 26rem;
+  }
+ }
+
+ a {
+  position: relative;
+ }
+
+ svg {
+  position: absolute;
+  top: 23px;
+  left: 157px;
+ }
+
+ // Images
+ &__images {
+  margin-bottom: 8.25rem;
+
+  @include breakpoint-up(medium) {
+   min-height: 82.8125rem;
+   margin-bottom: 0rem;
+  }
+
+  @include breakpoint-up(large) {
+   min-height: 68.5rem;
+  }
+ }
+
+ ul {
+  @include breakpoint-up(large) {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+  }
+ }
+
+ &__images--heading {
+  padding: 4.5rem 0 4rem 0;
+
+  @include breakpoint-up(medium) {
+   padding: 12.5rem 0 5.25rem 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  @include breakpoint-up(large) {
+   padding: 14.5rem 0 4.25rem 0;
+  }
+
+  .btn-portfolio {
+   padding: 2.35rem 6rem;
+
+   svg {
+    top: 0;
+    left: 5rem;
+   }
+  }
+ }
+
+ &__images--container {
+  min-height: var(--min-height-portfolio-mobile);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  position: relative;
+
+  @include breakpoint-up(large) {
+   margin-bottom: 0;
+
+   &:not(:last-of-type) {
+    margin-right: 1.875rem;
+   }
+  }
+
+  &:nth-of-type(1) {
+   background-position: bottom;
+   background-image: url('/assets/portfolio/mobile/image-del-sol.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-del-sol.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-del-sol.jpg');
+   }
+  }
+
+  &:nth-of-type(2) {
+   background-image: url('/assets/portfolio/mobile/image-228b.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-228b.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-228b.jpg');
+   }
+  }
+
+  &:nth-of-type(3) {
+   background-position: center;
+   background-image: url('/assets/portfolio/mobile/image-prototype.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-prototype.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
+   }
+  }
+ }
+
+ &__images--content {
+  position: relative;
+  min-height: var(--min-height-portfolio-mobile);
+  background-image: linear-gradient(
+   rgba(128, 128, 128, 0.26),
+   rgba(0, 0, 0, 0.288)
+  );
+  color: var(--secondary-light);
+  line-height: 1.6;
+  padding: 10rem 0 0 1.5rem;
+
+  @include breakpoint-up(large) {
+   min-height: var(--min-height-mobile);
+   padding: 29.125rem 0 0 2.5rem;
+  }
+
+  // Number overlays
+  span {
+   display: none;
+   @include breakpoint-up(medium) {
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: 18px;
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.603);
+   }
+
+   @include breakpoint-up(large) {
+    top: -6px;
+    right: -19px;
+   }
+  }
+ }
+
+ .link-btn-features-mobile {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  width: 100%;
+
+  .wrap {
+   position: relative;
+  }
+
+  .svg-wrap {
+   position: absolute;
+   top: -20px;
+   left: -79px;
+  }
+
+  @include breakpoint-up(medium) {
+   display: none;
+  }
+ }
+}

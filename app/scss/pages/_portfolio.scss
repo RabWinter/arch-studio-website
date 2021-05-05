@@ -1,0 +1,208 @@
+@use '../abstracts' as *;
+
+.header__links.portfolio {
+ a {
+  &:first-child {
+   color: var(--primary-heading);
+   position: relative;
+
+   &::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    right: 0;
+    width: 25px;
+    height: 1.5px;
+    background-color: var(--primary-heading);
+   }
+  }
+ }
+}
+
+.gallery {
+ margin: 3.5rem 0 8.25rem 0;
+
+ @include breakpoint-up(medium) {
+  margin: 0 0 12.5rem 0;
+ }
+
+ @include breakpoint-up(medium) {
+  margin: 0 0 10rem 0;
+ }
+
+ &__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+
+  @include breakpoint-up(large) {
+   grid-template-columns: repeat(3, 1fr);
+  }
+ }
+
+ &__item {
+  min-height: 15rem;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(224, 224, 224, 0.411);
+   opacity: 0;
+   @include hover(speed);
+  }
+
+  &:hover::before {
+   opacity: 1;
+  }
+
+  &:first-child {
+   background-image: url('/assets/portfolio/mobile/image-seraph.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-seraph.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-seraph.jpg');
+   }
+  }
+
+  &:nth-child(2) {
+   background-image: url('/assets/portfolio/mobile/image-eebox.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-eebox.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-eebox.jpg');
+   }
+  }
+
+  &:nth-child(3) {
+   background-image: url('/assets/portfolio/mobile/image-federal.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-federal.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-federal.jpg');
+   }
+  }
+
+  &:nth-child(4) {
+   background-image: url('/assets/portfolio/mobile/image-del-sol.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-del-sol.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-del-sol.jpg');
+   }
+  }
+
+  &:nth-child(5) {
+   background-image: url('/assets/portfolio/mobile/image-prototype.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-prototype.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
+   }
+  }
+
+  &:nth-child(6) {
+   background-image: url('/assets/portfolio/mobile/image-228b.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-228b.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-228b.jpg');
+   }
+  }
+
+  &:nth-child(7) {
+   background-image: url('/assets/portfolio/mobile/image-edelweiss.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-edelweiss.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-edelweiss.jpg');
+   }
+  }
+
+  &:nth-child(8) {
+   background-image: url('/assets/portfolio/mobile/image-netcry.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-netcry.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-netcry.jpg');
+   }
+  }
+
+  &:nth-child(9) {
+   background-image: url('/assets/portfolio/mobile/image-hypers.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-hypers.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-hypers.jpg');
+   }
+  }
+
+  &:nth-child(10) {
+   background-image: url('/assets/portfolio/mobile/image-sxiv.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-sxiv.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-sxiv.jpg');
+   }
+  }
+
+  &:nth-child(11) {
+   background-image: url('/assets/portfolio/mobile/image-trinity.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-trinity.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-trinity.jpg');
+   }
+  }
+
+  &:nth-child(12) {
+   background-image: url('/assets/portfolio/mobile/image-paramour.jpg');
+
+   @include breakpoint-up(medium) {
+    background-image: url('/assets/portfolio/tablet/image-paramour.jpg');
+   }
+
+   @include breakpoint-up(large) {
+    background-image: url('/assets/portfolio/desktop/image-paramour.jpg');
+   }
+  }
+ }
+}

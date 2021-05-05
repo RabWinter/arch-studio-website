@@ -1,0 +1,126 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+html {
+ font-size: 100%;
+ box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+ padding: 0;
+ margin: 0;
+ box-sizing: inherit;
+}
+
+body {
+ min-height: 100vh;
+ font-family: 'Spartan', sans-serif;
+ position: relative;
+
+ &.no-scroll {
+  overflow: hidden;
+ }
+}
+
+h1,
+h2,
+p {
+ padding: 0;
+ margin: 0;
+}
+
+html:focus-within {
+ scroll-behavior: smooth;
+}
+
+a {
+ text-decoration: none;
+ cursor: pointer;
+ color: var(--primary-dark);
+}
+
+ul {
+ list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+ font: inherit;
+}
+
+// Helper Classes
+
+// Flex Box
+.flex-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+// Visibility
+.hide-for-mobile {
+ @include breakpoint-down(medium) {
+  display: none;
+ }
+}
+
+.hide-for-tablet {
+ @include breakpoint-up(medium) {
+  display: none;
+ }
+}
+
+.show-for-desktop {
+ @include breakpoint-up(large) {
+  display: block;
+ }
+}
+
+// BG Image
+.bg-image {
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+// Layout
+.container {
+ @include breakpoint-up(medium) {
+  margin: 0 6.0625rem;
+ }
+
+ @include breakpoint-up(large) {
+  position: relative;
+  margin: 0 auto;
+  max-width: 90rem;
+ }
+}
+
+.container-margin {
+ padding: 0 2rem;
+
+ @include breakpoint-up(medium) {
+  padding: 0 3.5625rem;
+ }
+
+ @include breakpoint-up(xlarge) {
+  padding: 0 11.8125rem;
+ }
+}
+
+.container-mobile {
+ padding: 0 2rem;
+
+ @include breakpoint-up(medium) {
+  padding: 0;
+ }
+}
+
+.margin {
+ @include breakpoint-up(large) {
+  margin: 0 10.25rem;
+ }
+}

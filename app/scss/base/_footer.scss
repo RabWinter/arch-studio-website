@@ -1,0 +1,128 @@
+@use '../abstracts' as *;
+
+
+
+.footer {
+//  min-height: 23.875rem;
+margin-top: 2rem;
+ background-color: var(--secondary-light);
+ position: relative;
+
+ @include breakpoint-up(medium) {
+  position: absolute;
+  left: 0;
+  // min-height: 7.5rem;
+  width: 80%;
+ }
+
+ @include breakpoint-up(large) {
+  width: 60%;
+}
+
+@include breakpoint-up(xlarge) {
+   min-height: 12.5rem;
+  width: 68%;
+ }
+
+ &__logo--container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 7.5rem;
+  width: 7.5rem;
+  background-color: var(--primary-heading);
+
+  @include breakpoint-up(medium) {
+   bottom: 0;
+   left: 0;
+   transform: translate(0, 0);
+  }
+
+  @include breakpoint-up(xlarge) {
+   height: 12.5rem;
+   width: 12.5rem;
+  }
+ }
+
+ &__logo--img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1.625rem;
+  width: 3.6875rem;
+  background-image: url('/assets/logo-light.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include breakpoint-up(xlarge) {
+   height: 2.5rem;
+   width: 6.0625rem;
+  }
+ }
+
+ ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.8125rem 0 3rem 0;
+
+  li {
+   padding-bottom: 2.8125rem;
+   color: var(--secondary-text);
+   @include hover(speed);
+
+   &:hover {
+     color: var(--primary-heading);
+   }
+
+   @include breakpoint-up(medium) {
+    padding: 0;
+    display: inline-block;
+
+    &:not(:last-of-type) {
+     padding-right: 3.625rem;
+    }
+   }
+  }
+
+  @include breakpoint-up(medium) {
+   min-height: 7.5rem;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 0;
+  }
+ }
+
+ &__links {
+   font-weight: 700;
+  @include breakpoint-up(medium) {
+   position: absolute;
+   left: 9.4rem;
+   top: 48px;
+   font-size: var(--font-text-sm);
+  }
+
+  @include breakpoint-up(xlarge) {
+    left: 17.4rem;
+    top: 85px;
+  }
+ }
+
+ .btn-portfolio {
+  @include breakpoint-up(medium) {
+   position: absolute;
+   right: -9.5rem;
+  }
+
+  @include breakpoint-up(large) {
+   right: -7.3rem;
+  }
+
+  @include breakpoint-up(xlarge) {
+   right: -8rem;
+   top: 3.6rem;
+  }
+ }
+}
